@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class ChangeNamePanel : MonoBehaviour
 {
-    public Text name;
+    public Text _name;
     public InputField input;
     public Button enterButton;
 
@@ -21,7 +21,7 @@ public class ChangeNamePanel : MonoBehaviour
         {
             if (input.text != "")
             {
-                name.text = "姓名：" + input.text;
+                _name.text = "姓名：" + input.text;
                 gameObject.SetActive(false);
             }
         });
@@ -29,7 +29,7 @@ public class ChangeNamePanel : MonoBehaviour
         {
             if (input.text != "")
             {
-                name.text = "姓名：" + s;
+                _name.text = "姓名：" + s;
                 gameObject.SetActive(false);
             }
         });
