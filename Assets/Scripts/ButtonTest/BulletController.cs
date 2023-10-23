@@ -8,6 +8,11 @@ public class BulletController : MonoBehaviour
     void Start()
     {
         Destroy(this.gameObject, 2f);
+        AudioSource audio;
+        if (TryGetComponent<AudioSource>(out audio))
+        {
+            ToggleTest.Instance.PlayAudio(audio);
+        }
     }
 
     // Update is called once per frame
