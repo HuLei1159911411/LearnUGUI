@@ -1,18 +1,23 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class InputFieldTest : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Button buttonChangeName;
+    public Text Name;
+    public RectTransform ChangeNamePanel;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        buttonChangeName.onClick.AddListener(() =>
+        {
+            ChangeNamePanel.gameObject.SetActive(true);
+        });
+        Name.text = "姓名：默认";
+        ChangeNamePanel.gameObject.SetActive(false);
     }
 }

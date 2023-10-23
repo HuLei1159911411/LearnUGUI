@@ -569,7 +569,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 20, y: 35}
-  m_SizeDelta: {x: 300, y: 120}
+  m_SizeDelta: {x: 498.837, y: 120}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &394484080
 MonoBehaviour:
@@ -1032,7 +1032,7 @@ MonoBehaviour:
   m_SelectionColor: {r: 0.65882355, g: 0.80784315, b: 1, a: 0.7529412}
   m_Text: 
   m_CaretBlinkRate: 0.85
-  m_CaretWidth: 1
+  m_CaretWidth: 5
   m_ReadOnly: 0
   m_ShouldActivateOnSelect: 1
 --- !u!114 &526771179
@@ -1729,6 +1729,7 @@ GameObject:
   - component: {fileID: 1218939968}
   - component: {fileID: 1218939970}
   - component: {fileID: 1218939969}
+  - component: {fileID: 1218939971}
   m_Layer: 5
   m_Name: ChangeNamePanel
   m_TagString: Untagged
@@ -1795,6 +1796,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1218939967}
   m_CullTransparentMesh: 1
+--- !u!114 &1218939971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218939967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 777d6cf68c930ba45a13046f1735c644, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: {fileID: 394484080}
+  input: {fileID: 526771178}
+  enterButton: {fileID: 1344367268}
 --- !u!1 &1344367266
 GameObject:
   m_ObjectHideFlags: 0
@@ -1926,6 +1942,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1370846040}
+  - component: {fileID: 1370846041}
   m_Layer: 5
   m_Name: InputFieldTest
   m_TagString: Untagged
@@ -1956,6 +1973,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1370846041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370846039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e66419bb474fb2498a5ac74344cbc24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonChangeName: {fileID: 1511306862}
+  Name: {fileID: 394484080}
+  ChangeNamePanel: {fileID: 1218939968}
 --- !u!1 &1417299215
 GameObject:
   m_ObjectHideFlags: 0
