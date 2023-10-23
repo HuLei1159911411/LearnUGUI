@@ -11,7 +11,8 @@ public class BulletController : MonoBehaviour
         AudioSource audio;
         if (TryGetComponent<AudioSource>(out audio))
         {
-            audio.mute = !SouceData.SouceOpen;
+            audio.mute = !SoundData.SoundOpen;
+            audio.volume = SoundData.SoundValue;
             audio.Play();
         }
     }

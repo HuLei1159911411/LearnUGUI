@@ -15,7 +15,7 @@ public class ToggleTest : MonoBehaviour
     private void Start()
     {
         group = GetComponent<ToggleGroup>();
-        if (SouceData.SouceOpen)
+        if (SoundData.SoundOpen)
             toggleOn.isOn = true;
         toggleOn.onValueChanged.AddListener(ToggleChangeValue);
         toggleOn.onValueChanged.AddListener(ToggleChangeValue);
@@ -26,9 +26,9 @@ public class ToggleTest : MonoBehaviour
         foreach (Toggle toggle in group.ActiveToggles())
         {
             if (toggle == toggleOn)
-                SouceData.SouceOpen = true;
+                SoundData.SoundOpen = true;
             else
-                SouceData.SouceOpen = false;
+                SoundData.SoundOpen = false;
         }
     }
 }
