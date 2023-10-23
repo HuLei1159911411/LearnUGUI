@@ -7,8 +7,7 @@ using UnityEngine.UI;
 
 public class ButtonTest : MonoBehaviour
 {
-    public Transform player;
-    public GameObject bulletPrefab;
+    public PlayerController player;
 
     private void Start()
     {
@@ -21,6 +20,6 @@ public class ButtonTest : MonoBehaviour
 
     private void OnClick()
     {
-        Instantiate(bulletPrefab, player.position, player.rotation);
+        player.Fire();
     }
 }
