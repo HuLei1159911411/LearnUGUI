@@ -10,5 +10,5 @@ public class PlayerController : MonoBehaviour
         if (bulletPrefab == null)
             bulletPrefab = Resources.Load<GameObject>("BulletPrefab");
         Instantiate(bulletPrefab, transform.position, transform.rotation);
-    }
+    }   
 }

@@ -11,7 +11,8 @@ public class BulletController : MonoBehaviour
         AudioSource audio;
         if (TryGetComponent<AudioSource>(out audio))
         {
-            ToggleTest.Instance.PlayAudio(audio);
+            audio.mute = !SouceData.SouceOpen;
+            audio.Play();
         }
     }
 
