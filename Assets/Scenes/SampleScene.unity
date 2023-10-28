@@ -362,7 +362,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1856293194}
   m_HandleRect: {fileID: 1856293193}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -686,7 +686,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -0.000091552734}
   m_SizeDelta: {x: 0, y: 500}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &327323872
@@ -1213,7 +1213,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -250, y: 430}
+  m_AnchoredPosition: {x: -260, y: 430}
   m_SizeDelta: {x: 200, y: 100}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &468757747
@@ -1525,6 +1525,7 @@ GameObject:
   - component: {fileID: 528584721}
   - component: {fileID: 528584723}
   - component: {fileID: 528584722}
+  - component: {fileID: 528584724}
   m_Layer: 5
   m_Name: BagPanel
   m_TagString: Untagged
@@ -1592,6 +1593,23 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 528584720}
   m_CullTransparentMesh: 1
+--- !u!114 &528584724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 528584720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbcbf52f8f2daf14f873ca61f48268d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonCloseBagPanel: {fileID: 468757747}
+  scrollView: {fileID: 1946808748}
+  itemNum: 40
+  offset: {x: 30, y: 30}
+  itemSize: {x: 100, y: 100}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -4154,6 +4172,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1909852951}
+  - component: {fileID: 1909852952}
   m_Layer: 5
   m_Name: ScrollViewTest
   m_TagString: Untagged
@@ -4183,6 +4202,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1909852952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909852950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0be9252317c20a848ac6842f5a647392, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonOpenBagPanel: {fileID: 1525268910}
+  bagPanel: {fileID: 528584721}
 --- !u!1 &1946808746
 GameObject:
   m_ObjectHideFlags: 0
@@ -4222,7 +4255,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: -117.6001, y: 0}
-  m_SizeDelta: {x: 500, y: 700}
+  m_SizeDelta: {x: 530, y: 700}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &1946808748
 MonoBehaviour:
@@ -4237,13 +4270,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Content: {fileID: 262783879}
-  m_Horizontal: 1
+  m_Horizontal: 0
   m_Vertical: 1
   m_MovementType: 1
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
-  m_ScrollSensitivity: 1
+  m_ScrollSensitivity: 10
   m_Viewport: {fileID: 942114801}
   m_HorizontalScrollbar: {fileID: 0}
   m_VerticalScrollbar: {fileID: 32415249}
