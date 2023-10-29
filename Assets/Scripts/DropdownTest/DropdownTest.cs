@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class DropdownTest : MonoBehaviour
 {
-    public Light light;
+    public Light _light;
     public Dropdown dropdown;
     
     void Start()
@@ -15,10 +15,10 @@ public class DropdownTest : MonoBehaviour
             switch (dropdown.options[index].text)
             {
                 case "白天":
-                    light.intensity = 1;
+                    _light.intensity = 1;
                     break;
                 case "黑夜":
-                    light.intensity = 0.2f;
+                    _light.intensity = 0.2f;
                     break;
             }
         });
