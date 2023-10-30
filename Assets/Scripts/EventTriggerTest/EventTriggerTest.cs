@@ -28,12 +28,23 @@ public class EventTriggerTest : MonoBehaviour
 
     private void JoyOnDrag(BaseEventData Data)
     {
-        Vector2 delta = (Data as PointerEventData).delta;
-        // print("--------------------------");
-        // print("anchoredPosition = " + joy.anchoredPosition);
-        // print("position = " + joy.position);
-        // print("delta = " + delta);
-        joy.position += new Vector3(delta.x, delta.y, 0);
+        // Vector2 delta = (Data as PointerEventData).delta;
+        // // print("--------------------------");
+        // // print("anchoredPosition = " + joy.anchoredPosition);
+        // // print("position = " + joy.position);
+        // // print("delta = " + delta);
+        // joy.position += new Vector3(delta.x, delta.y, 0);
+        PointerEventData pointerEventData = Data as PointerEventData;
+        Vector2 nowPosition;
+        RectTransformUtility.ScreenPointToLocalPointInRectangle(
+            joy.parent as RectTransform, 
+            pointerEventData.position,
+            pointerEventData.enterEventCamera,
+            out nowPosition
+        );
+        joy.localPosition = nowPosition;
+        
+        // 限制摇杆位置范围
         if (joy.anchoredPosition.magnitude > 130)
         {
             joy.anchoredPosition = joy.anchoredPosition.normalized * 130;
